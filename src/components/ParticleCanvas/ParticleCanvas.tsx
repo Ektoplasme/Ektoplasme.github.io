@@ -1,6 +1,5 @@
 import { useRef, useEffect } from "react";
-import { colors } from "./color";
-import React from "react";
+import { colors } from "../../utils/color";
 
 type Particle = {
   x: number;
