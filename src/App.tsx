@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import "./App.css";
 import ParticleCanvas from "./ParticleCanvas";
 import { colors } from "./color";
-import React from "react";
 
 function App() {
   function getRandomColor() {
