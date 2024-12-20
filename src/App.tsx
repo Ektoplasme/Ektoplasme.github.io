@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import "./App.css";
-import ParticleCanvas from "./ParticleCanvas";
-import { colors } from "./color";
+import ParticleCanvas from "./components/ParticleCanvas/ParticleCanvas";
+import { colors } from "./utils/color";
+import Card from "./components/Card/Card";
 
 function App() {
   function getRandomColor() {
@@ -60,6 +61,13 @@ function App() {
         <span>N</span>
         <span>E</span>
       </h1>
+      <div className="app-cards-container">
+        <Card
+          title="Salut! Bienvenue sur mon site! Ici tu trouveras plein de petits projets, mon CV et mes expérimentations en cours !"
+          subtitle="(Clique sur suivant pour en savoir plus...)"
+          buttonLabel="Suivant"
+        />
+      </div>
       <ParticleCanvas />
       <div className="glass-effect" />
     </>
