@@ -25,7 +25,7 @@
 
 .hover-title span:hover {
   transform: scale(1.5);
-  cursor: pointer;
+  cursor: url("cursor.cur"), auto;
 }
 
 canvas {
@@ -43,4 +43,9 @@ canvas {
   z-index: 2;
   backdrop-filter: blur(2px);
   pointer-events: none;
+}
+
+.app-cards-container .card-container {
+  width: 400px;
+  margin: 0 auto;
 }
