@@ -27,3 +27,29 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
+a {
+  color: rgb(123, 0, 255);
+  cursor: url("/cursor.cur"), auto;
+}
+
+input,
+button {
+  background-color: rgb(255, 225, 246);
+  color: rgb(67, 49, 49);
+  border: 1px solid rosybrown;
+}
+
+div::-webkit-scrollbar {
+  width: 10px;
+  height: 0;
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: #f9a6d9;
+  border-radius: 50px;
+}
+
+div::-webkit-scrollbar-thumb:hover {
+  background-color: #e179d3;
+}

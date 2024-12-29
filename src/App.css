@@ -65,6 +65,26 @@ canvas {
   width: 50px;
 }
 
-.linkedin-logo:hover {
-  cursor: url("/cursor.cur"), auto;
+.github-commits-container {
+  background-color: white;
+  color: black;
+  z-index: 3;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  box-shadow: rgb(245 179 132) 0px 10px 13px -7px,
+    rgba(0, 0, 0, 0) 5px 5px 15px 5px;
+}
+
+.commits-list {
+  height: 135px;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255 239 253);
+  border-radius: 4px;
+  padding: 0 15px;
 }
