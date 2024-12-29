@@ -11,7 +11,7 @@
   font-size: 6rem;
 
   position: relative;
-  z-index: 1111;
+  z-index: 3;
 }
 
 @media screen and (max-width: 768px) {
@@ -55,4 +55,16 @@ canvas {
   max-width: 400px;
   width: 100%;
   margin: 0 auto;
+}
+
+.linkedin-logo {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  z-index: 3;
+  width: 50px;
+}
+
+.linkedin-logo:hover {
+  cursor: url("/cursor.cur"), auto;
 }

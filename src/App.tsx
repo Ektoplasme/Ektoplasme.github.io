@@ -50,6 +50,12 @@ function App() {
 
   return (
     <>
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/jos%C3%A9phine-robin-2359b3155/"
+      >
+        <img className="linkedin-logo" src="Linkedin.svg" />
+      </a>
       <h1 className="hover-title">
         <span>J</span>
         <span>O</span>
@@ -68,7 +74,7 @@ function App() {
           subtitle="(Still under construction, you can play with the particles and the letters for now 🥲🌈)"
         />
       </div>
-      <ParticleCanvas particleNumber={100} />
+      <ParticleCanvas particleNumber={250} />
       <div className="glass-effect" />
     </>
   );
