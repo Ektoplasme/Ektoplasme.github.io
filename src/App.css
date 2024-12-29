@@ -14,6 +14,12 @@
   z-index: 1111;
 }
 
+@media screen and (max-width: 768px) {
+  .hover-title {
+    font-size: 3rem;
+  }
+}
+
 .hover-title span {
   display: inline-block;
   transition: transform 0.3s, color 0.3s;
@@ -46,6 +52,7 @@ canvas {
 }
 
 .app-cards-container .card-container {
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   margin: 0 auto;
 }

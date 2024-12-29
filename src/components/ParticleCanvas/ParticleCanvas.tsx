@@ -19,7 +19,11 @@ type Particle = {
   ) => void;
 };
 
-const ParticleCanvas = () => {
+type ParticleCanvasType = {
+  particleNumber: number;
+};
+
+const ParticleCanvas = ({ particleNumber }: ParticleCanvasType) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const particles = useRef<Particle[]>([]);
   const pointer = useRef<{ x: number | null; y: number | null }>({
@@ -122,7 +126,7 @@ const ParticleCanvas = () => {
     exclusionZone: DOMRect | null
   ) => {
     const newParticles: Particle[] = [];
-    for (let i = 0; i < 250; i++) {
+    for (let i = 0; i < particleNumber; i++) {
       const size = (Math.random() + 0.01) * 25;
       let x = Math.random() * (canvas.width - size * 2);
       let y = Math.random() * (canvas.height - size * 2);
@@ -190,14 +194,22 @@ const ParticleCanvas = () => {
       initParticles(canvas, exclusionZone);
       animate(canvas, exclusionZone);
 
-      const handleResize = () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+      // Variable pour le debounce
+      let resizeTimeout = null;
 
-        const updatedExclusionZone = exclusionZoneElement
-          ? exclusionZoneElement.getBoundingClientRect()
-          : null;
-        initParticles(canvas, updatedExclusionZone);
+      const handleResize = () => {
+        if (resizeTimeout) {
+          clearTimeout(resizeTimeout);
+        }
+        resizeTimeout = setTimeout(() => {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+
+          const updatedExclusionZone = exclusionZoneElement
+            ? exclusionZoneElement.getBoundingClientRect()
+            : null;
+          initParticles(canvas, updatedExclusionZone);
+        }, 200);
       };
 
       const handleMouseMove = (event: MouseEvent) => {

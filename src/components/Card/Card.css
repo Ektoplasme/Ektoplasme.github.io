@@ -1,5 +1,5 @@
 .card-container {
-  height: 200px;
+  min-height: 200px;
   border-radius: 20px;
   color: rgb(255, 163, 178);
   background-color: rgb(252, 251, 235);
@@ -17,7 +17,11 @@
 }
 
 .card-container h3 {
-  color: rgb(215, 175, 255);
+  color: rgb(164, 126, 201);
+}
+.card-container h2 {
+  font-size: 2rem;
+  color: rgb(255, 175, 216);
 }
 
 .card-container {
