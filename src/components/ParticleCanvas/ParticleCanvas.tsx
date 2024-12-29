@@ -195,7 +195,7 @@ const ParticleCanvas = ({ particleNumber }: ParticleCanvasType) => {
       animate(canvas, exclusionZone);
 
       // Variable pour le debounce
-      let resizeTimeout = null;
+      let resizeTimeout: null | number = null;
 
       const handleResize = () => {
         if (resizeTimeout) {
