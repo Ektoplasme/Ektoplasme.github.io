@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./App.css";
 import ParticleCanvas from "./components/ParticleCanvas/ParticleCanvas";
 import { colors } from "./utils/color";
 import Card from "./components/Card/Card";
 
 function App() {
-  const [cardVisible, setCardVisible] = useState(true);
-
   function getRandomColor() {
     const randomIndex = Math.floor(Math.random() * colors.length);
     return colors[randomIndex];
@@ -64,13 +62,11 @@ function App() {
         <span>E</span>
       </h1>
       <div className="app-cards-container">
-        {cardVisible && (
-          <Card
-            title="Hi! 👋"
-            description="I'm Joséphine Robin, fullstack (intermediate frontend and junior backend) web developer! Welcome to my website. Here you'll find everything about me, my experiences, current projects, and more!"
-            subtitle="(Still under construction, you can play with the particles and the letters for now 🥲🌈)"
-          />
-        )}
+        <Card
+          title="Hi! 👋"
+          description="I'm Joséphine Robin, fullstack (intermediate frontend and junior backend) web developer! Welcome to my website. Here you'll find everything about me, my experiences, current projects, and more!"
+          subtitle="(Still under construction, you can play with the particles and the letters for now 🥲🌈)"
+        />
       </div>
       <ParticleCanvas particleNumber={100} />
       <div className="glass-effect" />
