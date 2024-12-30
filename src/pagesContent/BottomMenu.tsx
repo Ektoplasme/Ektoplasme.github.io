@@ -10,10 +10,13 @@ export const BottomMenu = ({ currentPage, onButtonClick }: BottomMenuType) => {
         Experience
       </button>
       <button name="Current projects" onClick={onButtonClick}>
-        Current projects
+        Projects
       </button>
       <button name="About me" onClick={onButtonClick}>
         About me
+      </button>
+      <button name="What's left to do on the website?" onClick={onButtonClick}>
+        To do
       </button>
       {!!currentPage && (
         <button name="" onClick={onButtonClick}>

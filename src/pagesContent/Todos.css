@@ -1,0 +1,17 @@
+.todos-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  text-align: left;
+  justify-self: center;
+}
+
+.todos-container input {
+  width: 20px;
+  height: 20px;
+}
+
+.todos-container label {
+  font-size: 20px;
+  margin-left: 10px;
+}

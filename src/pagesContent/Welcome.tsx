@@ -6,7 +6,7 @@ export const Welcome = () => {
         backend) web developer! Welcome to my website. Here you'll find
         everything about me, my experiences, current projects, and more!
       </h3>
-      <h4>(Website still under construction 🥲🌈)</h4>
+      <h4>(Website under construction, see to do section 🌈)</h4>
     </>
   );
 };

@@ -41,7 +41,7 @@
 }
 
 .expanded {
-  width: 40vw; /* mobile passer à 80 ou 100 */
+  width: 40vw;
   max-width: inherit;
   margin: 40px 0;
   min-height: none;
@@ -50,6 +50,10 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.card-container p {
+  font-size: 1.15em;
 }
 
 .expanded .card-content {
