@@ -1,5 +1,6 @@
 .card-container {
   min-height: 200px;
+  max-width: 400px;
   border-radius: 20px;
   color: rgb(255, 163, 178);
   background-color: rgb(252, 251, 235);
@@ -7,13 +8,12 @@
     -7px -5px 15px 5px #8cff85, 12px -5px 15px 5px #80c7ff,
     12px 10px 15px 7px #e488ff, -10px 10px 15px 7px #ff616b,
     -10px -7px 27px 1px #8e5cff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-
   position: relative;
   z-index: 1111;
-
+  justify-self: center;
   font-size: 14px;
-
   padding: 30px;
+  animation: float 3s ease-in-out infinite;
 }
 
 .card-container h3 {
@@ -24,24 +24,49 @@
   color: rgb(255, 175, 216);
 }
 
-.card-container {
-  animation: float 3s ease-in-out infinite;
-}
-
 .card-container button {
   height: 30px;
-  width: 100px;
   border: none;
   border-radius: 5px;
   background-color: rgb(255, 195, 92);
   box-shadow: 1px 1px 15px 4px #ffbb5c;
   cursor: url("/cursor.cur"), auto;
   font-weight: bold;
+  color: white;
 }
 
 .card-container button:active {
   box-shadow: 1px 1px 13px #ffbb5c;
   background-color: rgb(254, 211, 138);
+}
+
+.expanded {
+  width: 40vw; /* mobile passer à 80 ou 100 */
+  max-width: inherit;
+  margin: 40px 0;
+  min-height: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.expanded .card-content {
+  height: 70vh;
+  overflow: scroll;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .expanded {
+    width: 90vw;
+  }
 }
 
 @keyframes float {

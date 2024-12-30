@@ -1,7 +1,6 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -49,12 +48,6 @@ canvas {
   z-index: 2;
   backdrop-filter: blur(2px);
   pointer-events: none;
-}
-
-.app-cards-container .card-container {
-  max-width: 400px;
-  width: 100%;
-  margin: 0 auto;
 }
 
 .linkedin-logo {

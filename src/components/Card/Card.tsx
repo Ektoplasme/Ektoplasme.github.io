@@ -1,29 +1,19 @@
+import { ReactNode } from "react";
 import "./Card.css";
 type CardProps = {
   title: string;
-  subtitle: string;
-  description: string;
-  buttonLabel?: string;
-  onClose?: () => void;
+  content: ReactNode;
+  expanded: boolean;
+  bottom?: ReactNode;
 };
 
-export default function Card({
-  title,
-  buttonLabel,
-  description,
-  subtitle,
-  onClose,
-}: CardProps) {
+export default function Card({ title, bottom, expanded, content }: CardProps) {
   return (
-    <div className="card-container">
+    <div className={`card-container ${expanded ? "expanded" : ""}`}>
       <h2>{title}</h2>
-      <h3>{description}</h3>
-      <h4>{subtitle}</h4>
-      {buttonLabel && (
-        <button className="card-button" onClick={onClose}>
-          {buttonLabel}
-        </button>
-      )}
+      {expanded && <div className="card-bottom">{bottom}</div>}
+      <div className="card-content">{content}</div>
+      {!expanded && <div className="card-bottom">{bottom}</div>}
     </div>
   );
 }
