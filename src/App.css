@@ -13,12 +13,6 @@
   z-index: 3;
 }
 
-@media screen and (max-width: 768px) {
-  .hover-title {
-    font-size: 3rem;
-  }
-}
-
 .hover-title span {
   display: inline-block;
   transition: transform 0.3s, color 0.3s;
@@ -80,4 +74,20 @@ canvas {
   background-color: rgb(255 239 253);
   border-radius: 4px;
   padding: 0 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .hover-title {
+    font-size: 3rem;
+  }
+  .github-commits-container {
+    display: none;
+  }
+}
+
+
+@media screen and (max-height: 950px) {
+  .github-commits-container {
+    display: none;
+  }
 }

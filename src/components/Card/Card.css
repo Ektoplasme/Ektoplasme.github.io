@@ -1,6 +1,7 @@
 .card-container {
   min-height: 200px;
   max-width: 400px;
+  overflow: hidden;
   border-radius: 20px;
   color: rgb(255, 163, 178);
   background-color: rgb(252, 251, 235);
@@ -44,7 +45,6 @@
   width: 40vw;
   max-width: inherit;
   margin: 40px 0;
-  min-height: none;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -57,7 +57,7 @@
 }
 
 .expanded .card-content {
-  height: 70vh;
+  height: 75%;
   overflow: scroll;
 }
 
@@ -67,9 +67,18 @@
   gap: 12px;
 }
 
+@media screen and (max-width: 400px) {
+  .expanded {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .expanded {
     width: 90vw;
+    animation: none;
   }
 }
 
