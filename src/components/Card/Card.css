@@ -59,6 +59,8 @@
 .expanded .card-content {
   height: 75%;
   overflow: scroll;
+
+  padding-top: 20px;
 }
 
 .card-bottom {

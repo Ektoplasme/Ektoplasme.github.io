@@ -18,10 +18,12 @@ function App() {
     const randomIndex = Math.floor(Math.random() * colors.length);
     return colors[randomIndex];
   }
+
   async function getCommits() {
     const data = await fetchCommits(githubToken);
     setCommits(data);
   }
+
   useEffect(() => {
     const letters = document.querySelectorAll(".hover-title span");
     const sound = new Audio("ClickSound.mp3");
@@ -85,15 +87,12 @@ function App() {
         <img className="linkedin-logo" src="Linkedin.svg" />
       </a>
       <h1 className="hover-title">
-        <span>J</span>
-        <span>O</span>
-        <span>S</span>
-        <span>É</span>
-        <span>P</span>
         <span>H</span>
-        <span>I</span>
-        <span>N</span>
         <span>E</span>
+        <span>L</span>
+        <span>L</span>
+        <span>O</span>
+        <span>!</span>
       </h1>
       <Card
         title={currentPage === "" ? "Hi! 👋" : currentPage}

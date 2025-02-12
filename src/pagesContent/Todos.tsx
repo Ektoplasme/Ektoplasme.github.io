@@ -7,15 +7,15 @@ export const ToDos = () => {
       <div className="todos-container">
         <section>
           <input type="checkbox" checked={false} />
+          <label>Mobile version 📱</label>
+        </section>
+        <section>
+          <input type="checkbox" checked={false} />
           <label>Improve overall style</label>
         </section>
         <section>
           <input type="checkbox" checked={false} />
           <label>Correct texts</label>
-        </section>
-        <section>
-          <input type="checkbox" checked={false} />
-          <label>Fix mobile version 📱</label>
         </section>
         <section>
           <input type="checkbox" checked={false} />
@@ -28,10 +28,6 @@ export const ToDos = () => {
         <section>
           <input type="checkbox" checked={false} />
           <label>Add french language support</label>
-        </section>
-        <section>
-          <input type="checkbox" checked={false} />
-          <label>???</label>
         </section>
         <section>
           <input type="checkbox" checked />
